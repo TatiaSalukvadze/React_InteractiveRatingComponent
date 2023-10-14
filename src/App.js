@@ -1,25 +1,26 @@
 import "./App.css";
 import { useState } from "react";
+import im from "./illustration-thank-you.svg";
 
 function App() {
   const [newp, setNew] = useState("false");
-  const [score, setScore] = useState("none");
+  const [score, setScore] = useState("0");
 
   return (
     <div className="App">
-      {newp === "true" ? <ChildTwo score={score} /> : <ChildOne f={setScore} />}
-
-      <button style={styles.sub} onClick={() => setNew("true")}>
-        Submit
-      </button>
+      {newp === "true" ? (
+        <ChildTwo score={score} />
+      ) : (
+        <ChildOne setScore={setScore} setNew={setNew} />
+      )}
     </div>
   );
 }
 
-function ChildOne({ f }) {
+function ChildOne({ setScore, setNew }) {
   const row = [];
   for (let i = 1; i < 6; i++) {
-    row.push(<But inp={i} id={i} f={f} />);
+    row.push(<But inp={i} id={i} setScore={setScore} />);
   }
   return (
     <div>
@@ -32,21 +33,33 @@ function ChildOne({ f }) {
         </p>
       </div>
       <div style={styles.flex}> {row}</div>
+      <button className="submit" onClick={() => setNew("true")}>
+        Submit
+      </button>
     </div>
   );
 }
 
 function ChildTwo({ score }) {
   return (
-    <p style={{ color: "white" }}>
-      You selected {score}&#11088; out of 5&#11088;!!!!!!!!
-    </p>
+    <div className="selected">
+      <img src={im} alt="img" />
+
+      <div className="rating">You selected {score} out of 5</div>
+      <div className="ratetext">
+        <h1>Thank you!</h1>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+    </div>
   );
 }
 
-function But({ inp, id, f }) {
+function But({ inp, id, setScore }) {
   function goor() {
-    f(id);
+    setScore(id);
     const elem = document.getElementById(id);
     elem.style.backgroundColor = "orange";
     for (let i = 1; i < 6; i++) {
@@ -68,15 +81,6 @@ const styles = {
   flex: {
     display: "flex",
     justifyContent: "space-between",
-  },
-  sub: {
-    width: "100%",
-    marginTop: "30px",
-    height: 50,
-    borderRadius: 50,
-    fontSize: "20px",
-    color: "white",
-    backgroundColor: "hsl(25, 97%, 53%)",
   },
 };
 export default App;

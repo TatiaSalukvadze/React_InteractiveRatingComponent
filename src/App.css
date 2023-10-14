@@ -1,7 +1,7 @@
 .App {
   width: 30vw;
   height:70vh;
-  background-color: hsl(213, 19%, 18%);
+background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
   border-radius: 10%;
  padding:40px;
 }
@@ -17,5 +17,57 @@
 .need:hover{
   background-color:hsl(217, 12%, 63%);
 }
+
+    .submit {
+      width: 100%;
+        margin-top: 30px;
+        height: 50px;
+        border-radius: 22.5px;
+        border:0;
+        font-size: 20px;
+        color: white;
+        background-color: #FC7614;
+    }
+
+    .submit:hover{
+        color: #FC7614;
+          background-color: white;
+    }
+
+    .rating{
+      width: 193px;
+        height: 32px;
+        border-radius: 22.5px;
+          background-color:  #262E38;
+          color:#FC7614;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom:32px;
+    }
+    .ratetext h1{
+      color: #FFF;
+        font-size: 28px;
+        font-weight: 700;
+    }
+         .ratetext p {
+          color:  #969FAD;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            width: 340px;
+            /* 160% */
+         }
+  .selected, .ratetext{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .selected img{
+    margin-bottom:36px;
+    margin-top:45px;
+  }
+    
 
 
