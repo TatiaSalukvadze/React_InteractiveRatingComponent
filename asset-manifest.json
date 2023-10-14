@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/React_InteractiveRatingComponent/static/css/main.623c6d74.css",
-    "main.js": "/React_InteractiveRatingComponent/static/js/main.d772135a.js",
+    "main.css": "/React_InteractiveRatingComponent/static/css/main.5c10c57e.css",
+    "main.js": "/React_InteractiveRatingComponent/static/js/main.5a53339f.js",
+    "static/media/illustration-thank-you.svg": "/React_InteractiveRatingComponent/static/media/illustration-thank-you.d74a66b551b99ae110b5362ed63106bf.svg",
     "index.html": "/React_InteractiveRatingComponent/index.html",
-    "main.623c6d74.css.map": "/React_InteractiveRatingComponent/static/css/main.623c6d74.css.map",
-    "main.d772135a.js.map": "/React_InteractiveRatingComponent/static/js/main.d772135a.js.map"
+    "main.5c10c57e.css.map": "/React_InteractiveRatingComponent/static/css/main.5c10c57e.css.map",
+    "main.5a53339f.js.map": "/React_InteractiveRatingComponent/static/js/main.5a53339f.js.map"
   },
   "entrypoints": [
-    "static/css/main.623c6d74.css",
-    "static/js/main.d772135a.js"
+    "static/css/main.5c10c57e.css",
+    "static/js/main.5a53339f.js"
   ]
 }
